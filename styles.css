@@ -45,7 +45,7 @@ html {
   --offset: 50px;
 }
 
-body{
+body {
   background-color: rgba(250, 253, 249, 1);
 }
 
@@ -62,6 +62,7 @@ body{
   font-display: swap;
   src: url(./fonts/GT-Maru-Mega-Midi-Trial.otf) format('woff');
 }
+
 @font-face {
   font-family: 'GT Maru Light';
   font-style: normal;
@@ -96,6 +97,7 @@ body{
   font-display: swap;
   src: url(./fonts/LmsPokemonMasterSolid-LEjG.ttf) format('woff');
 }
+
 @font-face {
   font-family: 'Domine';
   font-style: normal;
@@ -116,65 +118,120 @@ body{
   grid-template-rows: auto;
   grid-template-columns: 100%;
   gap: calc(var(--spacing) * 2);
-  margin: 0 auto;
+  margin-top: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+  
 }
 
 /* Header */
 
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  border-bottom: 1.2px solid rgba(0, 0, 0, 1);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+header p {
+  padding-left: 2em;
+  font-size: 2em;
+  font-family: 'Maru-Mega-Midi';
+  color: #ff0090;
+}
+
+header img {
+  margin-right: 2em;
+}
+
+.logo-bar{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 5em;
 
-  min-height: 100vh;
-
-  color: #ffffff;
-
-  background-color: skyblue;
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-image: url(./images/header.png);
 }
-
-header .content {
-  position: relative;
-  z-index: 2;
-
+.links{
   display: flex;
-  flex-direction: column;
-  gap: calc(var(--spacing) * 2);
+  flex-direction: row;
 
-  margin: auto;
-
-  text-align: center;
+  margin: 2em;
 }
 
-header h1 {
-  font-size: 4rem;
-  font-family: 'Krieg';
+.links a{
+  display: inline-block;
 }
 
-footer {
+
+
+
+
+
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40em;
-  background-image: linear-gradient(rgba(247, 127, 190, 1), rgba(4, 117, 192, 0.47));
+  position: absolute;
 }
 
-footer .content {
-  text-align: center;
+
+.video-container{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto; 
 }
+
+.video-background {
+  top: 0;
+  left: 0;
+  width: 100%; /* Maintain full width */
+  height: 40em; /* Set the desired shorter height */
+  object-fit: fill;
+ /* Adjust this value to hide the overflowing part */
+  z-index: -1;
+}
+
+
+.footer-content {
+  width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Set a maximum width */
+    justify-content: center;
+
+}
+.footer-content p{
+  text-align: center;
+  font-family: 'Krieg';
+  color: #fff;
+  font-size: 3rem;
+
+}
+
+
+
+
 
 .lower-body {
   margin: 50px;
 }
 
+
 .button-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 5em;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 
 
 }
@@ -207,6 +264,11 @@ footer .content {
   flex-direction: column;
   gap: var(--spacing);
 }
+.card-link {
+  display: block; /* Make the <a> element behave like a block element */
+  width: 100%; /* Fill the entire width of its container */
+  text-decoration: none; /* Remove underlines for links */
+}
 
 .card {
   display: flex;
@@ -214,19 +276,100 @@ footer .content {
   background-color: #ffffff;
   border: 1.2px solid rgba(0, 0, 0, 1);
   border-radius: 0.7em;
-  
+
   width: 100%;
   overflow: hidden;
   font-family: 'Maru-Mono-Light', sans-serif;
+  text-decoration: none;
+  color: #000;
 }
 
-.card > .image {
+.about-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Distribute space evenly between child elements */
+
+}
+
+.about-body-left,
+.about-body-right {
+  flex: 1;
+  /* Distribute available space evenly */
+
+  /* Optional: Add padding for spacing */
+}
+
+.about-body-right {
+  font-family: 'Maru-Mono-Regular';
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.abt-block-1,
+.abt-block-2,
+.abt-block-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.abt-block-2 {
+  border-top: 1.2px solid rgba(0, 0, 0, 1);
+  border-bottom: 1.2px solid rgba(0, 0, 0, 1);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.resume-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.resume-body a {
+  font-size: 3rem;
+  color: rgb(255, 0, 144);
+  font-family: 'Maru-Mono-Regular';
+  Text-decoration: none;
+}
+
+.resume-body a:hover {
+  color: greenyellow;
+}
+
+.cupcake-box {
+  max-width: 100%; /* Add a maximum width to the container */
+  margin-top: 10rem;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+
+}
+
+
+.cupcake-box img{
+  display: flex;
+  position: relative;
+  background-size: cover;
+  max-width: 25rem;
+  max-height: 25rem;
+}
+
+
+
+
+
+.card>.image {
   order: -1;
   height: 300px;
 }
 
-.card > .image img {
-  object-fit:cover;
+.card>.image img {
+  object-fit: cover;
   object-position: 50% 50%;
 
 
@@ -237,7 +380,7 @@ footer .content {
   height: 300px;
 }
 
-.card > .content {
+.card>.content {
   flex: 1;
 
   display: flex;
@@ -245,33 +388,30 @@ footer .content {
   justify-content: space-between;
 
 }
+
 .card:hover {
-  border-color: greenyellow; /* Change border color on hover */
- 
+  border-color: greenyellow;
+  /* Change border color on hover */
+
 }
 
-
-
-
-.card > .content > .project-name{
+.card>.content>.project-name {
   border-bottom: 1.2px solid rgba(0, 0, 0, 1);
   border-top: 1.2px solid rgba(0, 0, 0, 1);
   padding: 1em;
 }
 
-.card:hover > .content > .project-name {
-  border-bottom: 1.2px solid greenyellow;
+.card:hover>.content>.project-name {
+  border-bottom: 1.2px solid rgb(173, 255, 47);
   border-top: 1.2px solid greenyellow;
 }
-.card > .content > .project-date{
+
+.card>.content>.project-date {
   margin: 1em;
 
 }
 
-@media (min-width: 1000px) {
-
-
-}
+@media (min-width: 1000px) {}
 
 /*media query fyrir þegar mynd er >= 600 px*/
 @media (min-width: 600px) {
