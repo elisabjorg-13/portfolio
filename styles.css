@@ -177,6 +177,7 @@ header img {
   justify-content: center;
   align-items: center;
   position: absolute;
+
 }
 
 
@@ -185,6 +186,7 @@ header img {
   overflow: hidden;
   width: 100%;
   height: auto; 
+  background-color: #3d392c;
 }
 
 .video-background {
@@ -293,12 +295,69 @@ header img {
 
 }
 
-.about-body-left,
-.about-body-right {
+.project-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project-body-left,
+.project-body-right {
   flex: 1;
   /* Distribute available space evenly */
 
   /* Optional: Add padding for spacing */
+}
+
+.project-body-left{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 20px;
+
+
+}
+
+.project-body-left img{
+  max-height: 65rem;
+  max-width: 25rem;
+}
+
+
+
+.project-body-right{
+  font-family: 'Maru-Mono-Regular';
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-body-right p{
+  line-height: 2rem;
+}
+
+.project-body-right a{
+  text-decoration: none;
+  font-size: larger;
+  color: #000;
+}
+
+.project-body-right a:hover{
+  color: greenyellow;
+}
+
+
+
+
+
+.about-body-left,
+.about-body-right {
+  flex: 1;
+  /* Distribute available space evenly */
+  /* Optional: Add padding for spacing */
+
 }
 
 .about-body-right {
@@ -306,6 +365,10 @@ header img {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.about-body-right p{
+  line-height: 2rem;
 }
 
 .abt-block-1,
@@ -352,11 +415,8 @@ header img {
 
 
 .cupcake-box img{
-  display: flex;
-  position: relative;
-  background-size: cover;
-  max-width: 25rem;
-  max-height: 25rem;
+  max-width: 100%; /* Limit the width of the gif within its container */
+  height: auto;
 }
 
 
@@ -411,16 +471,76 @@ header img {
 
 }
 
-@media (min-width: 1000px) {}
+.museum-body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Maru-Mono-Regular';
+}
 
-/*media query fyrir þegar mynd er >= 600 px*/
-@media (min-width: 600px) {
-  main {
-    gap: var(--gutter);
+.museumItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center; /* Center align gif and title vertically */
+  justify-content: space-between;
+  margin-bottom: 6rem; /* Add spacing between museumItems */
+}
+.museumItem-gif {
+  flex: 1; /* Take 50% of available space */
+}
+
+.museumItem-gif img {
+  max-width: 100%; /* Limit the width of the gif within its container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.museumItem-title {
+  flex: 1;
+ /* Add spacing between gif and title */
+ text-align: center;
+}
+
+.museumItem-title-right{
+  flex: 1;
+  order: -1;
+  text-align: center;
+}
+.more-to-come{
+  font-family: 'Maru-Mono-Regular';
+  text-align: center;
+}
+
+.pikkolosolution{
+  display: flex;
+  flex-direction: column;
+  gap:0.7rem;
+  padding-bottom: 3rem;
+  font-family: 'Maru-Mono-Light';
+  font-size: 0.7rem;
+}
+
+.pikkolosolution p{
+ width: 25rem;
+}
+
+
+
+
+
+@media (min-width: 1000px) {
+  .museumItem{
+    display: flex;
+    flex-direction: row;
   }
 
 
+}
 
+/*media query fyrir þegar mynd er >= 600 px*/
+@media (min-width: 750px) {
+  main {
+    gap: var(--gutter);
+  }
 
 
   .wrapper {
@@ -440,4 +560,16 @@ header img {
     grid-column-start: span 6;
     /* max-width: calc(50% - var(--spacing) / 2); */
   }
+  .museumItem{
+    display: flex;
+    flex-direction: row;
+  }
+  .museumItem-title-right{
+    order: 1;
+    
+  }
+
+  
+
+  
 }
