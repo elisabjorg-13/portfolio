@@ -121,7 +121,7 @@ body {
   margin-top: 20px;
   margin-left: 70px;
   margin-right: 70px;
-  
+
 }
 
 /* Header */
@@ -149,21 +149,22 @@ header img {
   margin-right: 2em;
 }
 
-.logo-bar{
+.logo-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-left: 5em;
 
 }
-.links{
+
+.links {
   display: flex;
   flex-direction: row;
 
   margin: 2em;
 }
 
-.links a{
+.links a {
   display: inline-block;
 }
 
@@ -181,21 +182,23 @@ header img {
 }
 
 
-.video-container{
+.video-container {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: auto; 
+  height: auto;
   background-color: #3d392c;
 }
 
 .video-background {
   top: 0;
   left: 0;
-  width: 100%; /* Maintain full width */
-  height: 40em; /* Set the desired shorter height */
+  width: 100%;
+  /* Maintain full width */
+  height: 40em;
+  /* Set the desired shorter height */
   object-fit: fill;
- /* Adjust this value to hide the overflowing part */
+  /* Adjust this value to hide the overflowing part */
   z-index: -1;
 }
 
@@ -203,14 +206,16 @@ header img {
 .footer-content {
   width: 100%;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Set a maximum width */
-    justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Set a maximum width */
+  justify-content: center;
 
 }
-.footer-content p{
+
+.footer-content p {
   text-align: center;
   font-family: 'Krieg';
   color: #fff;
@@ -227,29 +232,41 @@ header img {
 }
 
 
+
 .button-row {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-
+  flex-direction: column;
+  align-items: flex-start
+    /* Stack buttons vertically */
+  ;
+  /* Center buttons horizontally */
+  margin-left: 3rem;
+  margin-top: 2rem;
 
 }
 
 .button-row a {
-  display: inline-block;
-  padding: 15px 35px;
-  margin: 5px;
-  border-radius: 30px;
+  display: block;
+  /* Display buttons as block elements */
+  /* Allow button width to adjust */
+  padding: 10px 15px;
+  /* Adjust padding for smaller screens */
+  font-size: 0.8rem;
+  /* Adjust font size for smaller screens */
   text-decoration: none;
   background-color: #ffffff;
   border: 1.2px solid rgba(0, 0, 0, 1);
   color: #000;
   font-weight: bolder;
   font-family: 'Maru-Mono-Light', sans-serif;
+  border-radius: 30px;
+  width: 7rem;
+
+  margin: 5px 0;
+  text-align: center;
+  /* Add margin to separate buttons vertically */
 }
+
 
 .button-row a:hover {
 
@@ -266,10 +283,14 @@ header img {
   flex-direction: column;
   gap: var(--spacing);
 }
+
 .card-link {
-  display: block; /* Make the <a> element behave like a block element */
-  width: 100%; /* Fill the entire width of its container */
-  text-decoration: none; /* Remove underlines for links */
+  display: block;
+  /* Make the <a> element behave like a block element */
+  width: 100%;
+  /* Fill the entire width of its container */
+  text-decoration: none;
+  /* Remove underlines for links */
 }
 
 .card {
@@ -286,65 +307,36 @@ header img {
   color: #000;
 }
 
-.about-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  /* Distribute space evenly between child elements */
-
-}
-
-.project-body{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.project-body-left,
-.project-body-right {
-  flex: 1;
-  /* Distribute available space evenly */
-
-  /* Optional: Add padding for spacing */
-}
-
-.project-body-left{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 20px;
 
 
-}
 
-.project-body-left img{
+
+.project-body-left img {
   max-height: 65rem;
   max-width: 25rem;
 }
 
 
 
-.project-body-right{
+.project-body-right {
   font-family: 'Maru-Mono-Regular';
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  order: -1;
 }
 
-.project-body-right p{
+.project-body-right p {
   line-height: 2rem;
 }
 
-.project-body-right a{
+.project-body-right a {
   text-decoration: none;
   font-size: larger;
   color: #000;
 }
 
-.project-body-right a:hover{
+.project-body-right a:hover {
   color: greenyellow;
 }
 
@@ -367,7 +359,7 @@ header img {
   gap: 2rem;
 }
 
-.about-body-right p{
+.about-body-right p {
   line-height: 2rem;
 }
 
@@ -405,17 +397,20 @@ header img {
 }
 
 .cupcake-box {
-  max-width: 100%; /* Add a maximum width to the container */
-  margin-top: 10rem;
+  max-width: 100%;
+  /* Add a maximum width to the container */
   display: flex;
   overflow: hidden;
   position: relative;
+  margin-bottom: 3rem;
+
 
 }
 
 
-.cupcake-box img{
-  max-width: 100%; /* Limit the width of the gif within its container */
+.cupcake-box img {
+  max-width: 100%;
+  /* Limit the width of the gif within its container */
   height: auto;
 }
 
@@ -481,54 +476,79 @@ header img {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  align-items: center; /* Center align gif and title vertically */
+  align-items: center;
+  /* Center align gif and title vertically */
   justify-content: space-between;
-  margin-bottom: 6rem; /* Add spacing between museumItems */
+  margin-bottom: 6rem;
+  /* Add spacing between museumItems */
 }
+
 .museumItem-gif {
-  flex: 1; /* Take 50% of available space */
+  flex: 1;
+  /* Take 50% of available space */
 }
 
 .museumItem-gif img {
-  max-width: 100%; /* Limit the width of the gif within its container */
-  height: auto; /* Maintain the aspect ratio */
+  max-width: 100%;
+  /* Limit the width of the gif within its container */
+  height: auto;
+  /* Maintain the aspect ratio */
 }
 
 .museumItem-title {
   flex: 1;
- /* Add spacing between gif and title */
- text-align: center;
+  /* Add spacing between gif and title */
+  text-align: center;
 }
 
-.museumItem-title-right{
+.museumItem-title-right {
   flex: 1;
   order: -1;
   text-align: center;
 }
-.more-to-come{
+
+.more-to-come {
   font-family: 'Maru-Mono-Regular';
   text-align: center;
 }
 
-.pikkolosolution{
+.pikkolosolution {
   display: flex;
   flex-direction: column;
-  gap:0.7rem;
+  gap: 0.7rem;
   padding-bottom: 3rem;
   font-family: 'Maru-Mono-Light';
   font-size: 0.7rem;
 }
 
-.pikkolosolution p{
- width: 25rem;
+.pikkolosolution p {
+  width: 25rem;
 }
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* Distribute space evenly between child elements */
+
+}
+
 
 
 
 
 
 @media (min-width: 1000px) {
-  .museumItem{
+  .museumItem {
     display: flex;
     flex-direction: row;
   }
@@ -560,16 +580,80 @@ header img {
     grid-column-start: span 6;
     /* max-width: calc(50% - var(--spacing) / 2); */
   }
-  .museumItem{
+
+  .museumItem {
     display: flex;
     flex-direction: row;
   }
-  .museumItem-title-right{
+
+  .museumItem-title-right {
     order: 1;
-    
+
   }
 
-  
+  .project-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 
-  
+  .project-body-left,
+  .project-body-right {
+    flex: 1;
+    /* Distribute available space evenly */
+
+    /* Optional: Add padding for spacing */
+  }
+
+  .project-body-right {
+    order: 1;
+  }
+
+  .project-body-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+
+
+  }
+
+  .about-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    /* Distribute space evenly between child elements */
+
+  }
+
+  .cupcake-box {
+    margin-right: 2rem;
+  }
+
+  .cupcake-box {
+    margin-top: 10rem;
+  }
+
+  .button-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2rem;
+    gap: 1rem;
+
+  }
+
+  .button-row a {
+    padding: 15px 25px;
+    /* Adjust padding for the bigger button */
+    font-size: 1rem;
+    /* Adjust font size for the bigger button */
+    width: 10rem;
+  }
+
+
 }
