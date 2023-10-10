@@ -385,11 +385,19 @@ header img {
   gap: 3rem;
 }
 
+.resume-body embed {
+  width: 100%;
+  /* Adjust the width for smaller screens */
+  height: 800px;
+  /* You can adjust the height as well if needed */
+}
+
 .resume-body a {
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: rgb(255, 0, 144);
   font-family: 'Maru-Mono-Regular';
-  Text-decoration: none;
+
+
 }
 
 .resume-body a:hover {
@@ -542,7 +550,9 @@ header img {
 
 }
 
-
+.museumbody{
+  background-color: #fff;
+}
 
 
 
@@ -653,6 +663,14 @@ header img {
     font-size: 1rem;
     /* Adjust font size for the bigger button */
     width: 10rem;
+  }
+
+
+  .resume-body {
+    max-width: 70%;
+    /* Set a maximum width for the resume container */
+    margin: 0 auto;
+    /* Center the container horizontally */
   }
 
 
